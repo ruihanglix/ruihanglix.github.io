@@ -23,6 +23,16 @@ a:hover {
   text-decoration: none;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 body,
 td,
 th,
@@ -32,6 +42,10 @@ a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-display: auto;
+}
+
+p {
+  line-height: 1.35;
 }
 
 strong {
@@ -72,6 +86,38 @@ h1 {
   margin-left: 0px;
   margin-right: 0px;
 
+}
+
+.page-shell {
+  box-sizing: border-box;
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(180px, 2fr);
+  align-items: center;
+  column-gap: 16px;
+  padding: 2.5%;
+}
+
+.profile-copy {
+  min-width: 0;
+}
+
+.profile-photo-wrap {
+  text-align: center;
+}
+
+.profile-photo {
+  display: block;
+  width: min(100%, 240px);
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.profile-links {
+  text-align: center;
 }
 
 .one {
@@ -121,6 +167,79 @@ span.highlight {
   text-align: center;
   font-weight: 700;
   line-height: 1.25;
+}
+
+@media screen and (max-width: 640px) {
+  .page-shell {
+    max-width: 100% !important;
+    padding: 0 18px;
+  }
+
+  .profile-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 22px 0 8px;
+  }
+
+  .profile-photo-wrap {
+    order: -1;
+  }
+
+  .profile-photo {
+    width: 136px;
+  }
+
+  .profile-copy p {
+    margin: 0 0 14px;
+  }
+
+  .profile-links {
+    margin-top: 18px !important;
+    line-height: 1.35;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-block-start: 8px;
+    margin-block-end: 16px;
+  }
+
+  .research-list,
+  .research-list tbody,
+  .research-item,
+  .research-image-cell,
+  .research-copy-cell {
+    display: block;
+    width: 100% !important;
+  }
+
+  .research-image-cell {
+    min-width: 0 !important;
+    padding: 16px 0 10px !important;
+  }
+
+  .research-copy-cell {
+    padding: 0 0 18px !important;
+  }
+
+  .research-image-cell .project-image,
+  .research-image-cell .project-placeholder {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .page-shell {
+    padding: 0 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

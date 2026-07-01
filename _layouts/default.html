@@ -28,12 +28,11 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table class="page-shell" style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
+        <section class="profile-header">
+          <div class="profile-copy">
               <h1>
                 {{ site.name }}
               </h1>
@@ -45,17 +44,16 @@
               <p>
                 Previously, he interned at <a href="https://www.microsoft.com/en-us/research/group/visual-computing/">Microsoft Research Asia</a>, closely collaborating with <a href="https://scholar.google.com/citations?user=Jkss014AAAAJ">Han Hu</a>, <a href="https://scholar.google.com/citations?user=nZ_PVbsAAAAJ">Zheng Zhang</a>, and <a href="https://scholar.google.com/citations?user=UYlhQS8AAAAJ">Houwen Peng</a> on LLM pretraining. He received his B.S. from <a href="https://en.ustc.edu.cn/">USTC</a> in 2023. He enjoys vibe coding and exploring the unknown, and aspires to push the boundaries of multimodal machine intelligence.
               </p>
-              <p style="text-align:center">
+              <p class="profile-links">
                 <a href="https://github.com/{{ site.footer-links.github }}">GitHub</a> &nbsp;/&nbsp;
                 <a href="{{ site.google_scholar }}">Google Scholar</a> &nbsp;/&nbsp;
                 <a href="https://{{ site.footer-links.linkedin }}">LinkedIn</a>
               </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%;border-radius:50%" alt="profile photo" src="{{ site.baseurl }}/{{ site.avatar }}">
-            </td>
-          </tr>
-        </table>
+          </div>
+          <div class="profile-photo-wrap">
+            <img class="profile-photo" alt="profile photo" src="{{ site.baseurl }}/{{ site.avatar }}">
+          </div>
+        </section>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
@@ -67,20 +65,20 @@
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="research-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
           {% if cat == 'research' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+          <tr class="research-item">
+            <td class="research-image-cell" style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               {% if post.image %}
               <img class="project-image" src="{{ site.baseurl }}/tn{{post.image}}" alt="project image" />
               {% else %}
               <div class="project-placeholder">{{ post.thumbnail_label | default: post.title }}</div>
               {% endif %}
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td class="research-copy-cell" style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
               {{post.authors}}
