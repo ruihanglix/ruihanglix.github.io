@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E00L9PT3V9');
+  </script>
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/images/favicon.png">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h1>
+                {{ site.name }}
+              </h1>
+              <p>Ruihang Li is a PhD student in a joint program between the <a href="https://en.ustc.edu.cn/">University of Science and Technology of China (USTC)</a> and the <a href="https://www.sii.edu.cn/">Shanghai Innovation Institute (SII)</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=Ma5DtmoAAAAJ">Wenjie Wang</a> and Dr. <a href="https://scholar.google.com/citations?user=GDvt570AAAAJ">Jiaqi Wang</a>. His research focuses on Reinforcement Learning, Visual Generation, and Unified Multimodal Models.
+              </p>
+              <p>
+                He was a research intern at Tencent Hunyuan Frontier Lab, focusing on RL and evaluation in visual generation. Additionally, he implemented a robust RL pipeline for the unified multimodal model <a href="https://deepgenteam.github.io/">DeepGen</a>, which has gained 580+ GitHub stars and 2500+ HuggingFace downloads.
+              </p>
+              <p>
+                Previously, he interned at <a href="https://www.microsoft.com/en-us/research/group/visual-computing/">Microsoft Research Asia</a>, closely collaborating with <a href="https://scholar.google.com/citations?user=Jkss014AAAAJ">Han Hu</a>, <a href="https://scholar.google.com/citations?user=nZ_PVbsAAAAJ">Zheng Zhang</a>, and <a href="https://scholar.google.com/citations?user=UYlhQS8AAAAJ">Houwen Peng</a> on LLM pretraining. He received his B.S. from <a href="https://en.ustc.edu.cn/">USTC</a> in 2023. He enjoys vibe coding and exploring the unknown, and aspires to push the boundaries of multimodal machine intelligence.
+              </p>
+              <p style="text-align:center">
+                <a href="https://github.com/{{ site.footer-links.github }}">GitHub</a> &nbsp;/&nbsp;
+                <a href="{{ site.google_scholar }}">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://{{ site.footer-links.linkedin }}">LinkedIn</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%;border-radius:50%" alt="profile photo" src="{{ site.baseurl }}/{{ site.avatar }}">
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Research</h2>
+              <p>
+                I'm interested in reinforcement learning, visual generation, unified multimodal models, and evaluation for generative systems.
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'research' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              {% if post.image %}
+              <img class="project-image" src="{{ site.baseurl }}/tn{{post.image}}" alt="project image" />
+              {% else %}
+              <div class="project-placeholder">{{ post.thumbnail_label | default: post.title }}</div>
+              {% endif %}
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              {{post.authors}}
+
+              <br>
+              {% assign display_date = post.display_date | strip %}
+              <em>{{post.venue}}</em>{% if post.display_date == nil %}, {{ post.date | date: "%Y" }}{% elsif display_date != "" %}, {{ display_date }}{% endif %}
+              {% if post.links %}
+              <br>
+              {% for link in post.links %}
+              {% unless forloop.first %} / {% endunless %}<a href="{{link.url}}">{{link.label}}</a>
+              {% endfor %}
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:center;font-size:small;">
+                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

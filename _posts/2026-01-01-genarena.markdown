@@ -1,0 +1,21 @@
+---
+layout: post
+title: "GenArena: How Can We Achieve Human-Aligned Evaluation for Visual Generation Tasks?"
+date: 2026-01-01 00:00:00 +00:00
+permalink: /research/genarena/
+display_date: "2026"
+image: /images/genarena.png
+thumbnail_label: "GenArena"
+categories: research
+authors: "<strong><em>Ruihang Li</em></strong>, Leigang Qu, Jingxu Zhang, Dongnan Gui, Mengde Xu, Xiaosong Zhang, Han Hu, Wenjie Wang, Jiaqi Wang"
+venue: "Preprint"
+links:
+  - label: "paper"
+    url: "https://arxiv.org/abs/2602.06013"
+  - label: "page"
+    url: "https://genarena.github.io"
+  - label: "code"
+    url: "https://github.com/ruihanglix/genarena"
+---
+
+Introduces GenArena, a pairwise comparison framework using open-source VLM judges for visual generation evaluation. It improves evaluation accuracy by +25.4% and produces rankings with an 86% match rate to LMArena across 15+ models.

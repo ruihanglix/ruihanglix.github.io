@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Optimizing Visual Generative Models via Distribution-wise Rewards"
+date: 2026-05-01 00:00:00 +00:00
+permalink: /research/distrl/
+display_date: ""
+image: /images/distrl.png
+thumbnail_label: "DistRL"
+categories: research
+authors: "<strong><em>Ruihang Li</em></strong>, Mengde Xu, Shuyang Gu, Leigang Qu, Fuli Feng, Han Hu, Wenjie Wang"
+venue: "ICML 2026 Main"
+---
+
+Proposes a distribution-wise RL framework for visual generation to mitigate reward hacking and mode collapse. By employing an efficient subset-replace strategy, this approach significantly improves the visual quality and diversity on the SiT model.

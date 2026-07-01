@@ -1,0 +1,23 @@
+---
+layout: post
+title: "DeepGen 1.0: A Lightweight Unified Multimodal Model for Advancing Image Generation and Editing"
+date: 2026-02-01 00:00:00 +00:00
+permalink: /research/deepgen/
+display_date: "2026"
+image: /images/deepgen.png
+thumbnail_label: "DeepGen"
+categories: research
+authors: "Dianyi Wang*, <strong>Ruihang Li*</strong>, Feng Han*, Chaofan Ma*, Wei Song*, Siyuan Wang*, Yibin Wang*, Yi Xin, Hongjian Liu, Zhixiong Zhang, Shengyuan Ding, Tianhang Wang, Zhenglin Cheng, Tao Lin, Cheng Jin, Kaicheng Yu, Jingjing Chen, Wenjie Wang, Zhongyu Wei, Jiaqi Wang"
+venue: "Technical Report"
+links:
+  - label: "paper"
+    url: "https://arxiv.org/abs/2602.12205"
+  - label: "page"
+    url: "https://deepgenteam.github.io/"
+  - label: "code"
+    url: "https://github.com/deepgenteam/deepgen"
+  - label: "blog (量子位)"
+    url: "https://mp.weixin.qq.com/s/EDIwHK9mzpv6uo2rPi7wcA"
+---
+
+Presents a lightweight unified multimodal model for image generation and editing. My contribution proposed MR-GRPO, enabling stable 1,500-step RL training, improving text rendering, and strengthening the 5B model's generation and editing performance.
