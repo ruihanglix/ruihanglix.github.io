@@ -20,4 +20,4 @@ links:
     url: "https://mp.weixin.qq.com/s/EDIwHK9mzpv6uo2rPi7wcA"
 ---
 
-Presents a lightweight unified multimodal model for image generation and editing. My contribution proposed MR-GRPO, enabling stable 1,500-step RL training, improving text rendering, and strengthening the 5B model's generation and editing performance.
+Presents a lightweight unified multimodal model for image generation and editing. Utilizes MR-GRPO for stable 1,500-step RL training, improved text rendering, and stronger 5B-model generation and editing performance.
