@@ -9,6 +9,9 @@ thumbnail_label: "DistRL"
 categories: research
 authors: "<strong><em>Ruihang Li</em></strong>, Mengde Xu, Shuyang Gu, Leigang Qu, Fuli Feng, Han Hu, Wenjie Wang"
 venue: "ICML 2026 Main"
+links:
+  - label: "paper"
+    url: "https://arxiv.org/abs/2607.02291"
 ---
 
 Proposes a distribution-wise RL framework for visual generation to mitigate reward hacking and mode collapse. By employing an efficient subset-replace strategy, this approach significantly improves the visual quality and diversity on the SiT model.
